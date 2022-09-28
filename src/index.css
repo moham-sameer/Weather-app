@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p{
+    font-size: 1.6rem;
+}
+
+.app{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+}
+.app:before{
+    content: '';
+    background: url('/src/sunset.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    z-index: -1;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.app .top{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    
+    width: 100%;
+    margin:  auto;
+    margin-top: 4rem;
+    
+}
+
+.app .description{
+    position: relative;
+    right: -97%;
+    top: 60px;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    font-family: 'Akaya Kanadaka', cursive;
+    
+}
+.top h1{
+    font-size: 4rem;
+}
+.top .location{
+    margin-left: 0.4rem;
+    font-size: large;
+}
+
+.app .bottom{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.2);
+}
+.bold{
+    font-weight: 700;
+}
+.app .container input{
+    border: 2px solid grey;
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    border-radius: 23px;
+    background-color: transparent;
+    color: antiquewhite;
+    font-size: 1rem;
+}
+::placeholder{
+    color: #fff;
+    /* font-size: 1rem; */
+}
+
+@media (min-width:250px) and (max-width:800px){
+    /* .app .bottom .bold {
+        font-size: .6rem;
+    } */
+    .app .bottom .wind{
+        font-size: .2rem;
+    }
+    p{
+        font-size: 14px;
+        margin: 3px;
+    }
+    .app .bottom .feels{
+        font-size: .2rem;
+    }
+    .app .bottom .humidity{
+        font-size: .2rem;
+    }
+    
+    .app .bottom{
+        margin-bottom: 56px;
+
+    }
+    
 }
