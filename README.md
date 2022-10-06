@@ -1,4 +1,4 @@
-#  Weather App 🥶
+#  Weather App 🌤️
 
 [Visit now](https://wappbysam.netlify.app)
 
